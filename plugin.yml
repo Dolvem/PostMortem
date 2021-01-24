@@ -1,0 +1,21 @@
+main: io.github.dolvem.postmortem.PostMortemApp
+version: 1.0
+api-version: 1.13
+name: PostMortem
+description: Saves your items on a chest when you die, fully configurable.
+author: Dolvem
+website: dolvem.github.io
+commands:
+  postmortem:
+    description: Shows a list with the active chests
+    usage: /postmortem <sub-command>
+    aliases: [postm]
+    permission:
+      postmortem
+permissions:
+  postmortem.list:
+    default: true
+  postmortem.*:
+    default: op
+    children: 
+      postmortem.list: true
